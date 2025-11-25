@@ -3,7 +3,6 @@ FROM eclipse-temurin:17-jdk-alpine AS build
 
 WORKDIR /app
 COPY . .
-RUN ./mvnw clean package -DskipTests
 
 # Stage 2: Run the JAR
 FROM eclipse-temurin:17-jre-alpine
