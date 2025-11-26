@@ -35,13 +35,10 @@ jobs:
       with:
         image: kannan1809/aishu-docker
         registry: docker.io
-        tags: new
+        tags: version_1
         dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: Pull to local 
-      run: docker pull kannan1809/aishu-docker:new    
+   
       
-    - name: run the container
-      run: docker run -p 8080:8080 kannan1809/aishu-docker:new
